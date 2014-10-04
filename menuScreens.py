@@ -58,3 +58,9 @@ class MainScreen(arche.Application):
             xprop = .50, caption = "Settings")
         self.buttonSettings.name = "settings button"
         self.addSprite(self.buttonSettings)
+
+        self.buttonStart = _createMainButton(
+            command = None,
+            xprop = .25, caption = "Start")
+        self.buttonStart.name = "start button"
+        self.addSprite(self.buttonStart)
