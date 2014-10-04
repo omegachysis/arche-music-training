@@ -55,3 +55,4 @@ target/
 *.pyproj
 *.sln
 *.suo
+*.user
