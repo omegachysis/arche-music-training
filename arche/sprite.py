@@ -1,7 +1,7 @@
 
 import pygame
 import sys
-from pygame.locals import *
+from pygame import locals
 import traceback
 import logging
 from .motion.action import Action

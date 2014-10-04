@@ -9,7 +9,7 @@ from os import path
 from . import config
 from . import compat
 
-from pygame.locals import *
+from pygame import locals
 
 log = logging.getLogger("R.Console")
 

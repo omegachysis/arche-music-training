@@ -1,7 +1,7 @@
 
 import pygame
 import sys
-from pygame.locals import *
+from pygame import locals
 from pygame import transform
 import pygame.freetype
 import traceback
