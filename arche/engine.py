@@ -177,6 +177,13 @@ class Application(object):
 
         self.addLayer("default")
 
+    def xprop(self, proportion):
+        if self.game:
+            return self.game.xprop(proportion)
+    def yprop(self, proportion):
+        if self.game:
+            return self.game.yprop(proportion)
+
     def getCanvas(self):
         return pygame.display.get_surface()
 
