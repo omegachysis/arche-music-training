@@ -3,7 +3,6 @@ import pygame
 import sys
 from pygame import locals
 from pygame import transform
-import pygame.freetype
 import traceback
 import logging
 

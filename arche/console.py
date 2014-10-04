@@ -305,7 +305,8 @@ class GameConsole(object):
         self.hidden = not self.hidden
 
     def _renderEntry(self):
-        surface, rect = self.font.render(self.entry, (255,255,255,255))
+        surface, rect = compat.freetypeRender(self.font, self.entry, (255,255,255,255))
+        surface, rect = compat.freetypeRender(self.font, self.entry, (255,255,255,255))
         rect.left = GameConsole.PADDING_LEFT
         rect.bottom = self.game.height - GameConsole.ENTRY_PADDING
 

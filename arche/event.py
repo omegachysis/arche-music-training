@@ -17,7 +17,7 @@ class Handler(object):
 
 class KeyHandler(Handler):
     def __init__(self):
-        super().__init__()
+        super(self.__class__, self).__init__()
 
         # NAME : [KEY, COMMAND, ARGS]
         self.commands = {}
@@ -51,7 +51,7 @@ class KeyHandler(Handler):
 
 class GameEngineHandler(Handler):
     def __init__(self):
-        super().__init__()
+        super(self.__class__, self).__init__()
         log.debug("game engine handler initialized")
         
     def run(self, event, game):
