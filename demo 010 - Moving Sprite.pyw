@@ -20,7 +20,7 @@ class WalkingRectangle(arche.Sprite):
     WALKING_SPEED = 300.00 # pixels per second
     
     def __init__(self):
-        super().__init__(
+        super(self.__class__, self).__init__(
             surface = arche.image.newRectangle(width = 50, height = 50, color = (255,255,0))
             )
 
@@ -63,7 +63,7 @@ class Obstacle(arche.Sprite):
 
     def __init__(self, app, width, height, x, y):
         
-        super().__init__(
+        super(self.__class__, self).__init__(
             surface = arche.image.newRectangle(width = width, height = height, color = (80,150,255)),
             )
 
@@ -75,7 +75,7 @@ class Obstacle(arche.Sprite):
 
 class Demo(arche.engine.Application):
     def __init__(self):
-        super().__init__()
+        super(self.__class__, self).__init__()
 
         self.backgroundColor = (10,120,20)
 

@@ -17,7 +17,7 @@ def main():
 
 class Demo(arche.engine.Application):
     def __init__(self):
-        super().__init__()
+        super(self.__class__, self)
 
         self.backgroundColor = (80,80,80)
 
