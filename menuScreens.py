@@ -30,21 +30,24 @@ class MainScreen(arche.Application):
         self.buttonQuitX.name = "x button"
         self.addSprite(self.buttonQuitX)
 
-        self.buttonQuit = arche.interface.SolidButton(
-            width = self.xprop(.2),
-            height= self.yprop(.1),
-            colorReset = (80,80,255),
-            colorHover = (120,120,255),
-            colorPress = (220,220,255),
+        def _createMainButton(command, xprop, yprop, caption):
+            return arche.interface.SolidButton(
+                width = self.xprop(.20),
+                height= self.yprop(.10),
+                x = self.xprop(xprop),
+                y = self.yprop(yprop),
+                colorReset = (80,80,255),
+                colorHover = (120,120,255),
+                colorPress = (220,220,255),
+                command = command,
+                textObject = arche.Text(
+                    value = caption,
+                    x = 0, y = 0,
+                    color = (255,255,255),
+                    size = self.xprop(.04),
+                    font = "font/consola.ttf"))
+
+        self.buttonQuit = _createMainButton(
             command = self.game.quit,
-            textObject = arche.Text(
-                value = "Quit",
-                x = 0, y = 0,
-                color = (255,255,255),
-                size = self.xprop(.04),
-                font = "font/consola.ttf"),
-            )
-        self.buttonQuit.x = self.xprop(.75)
-        self.buttonQuit.y = self.yprop(.85)
-        self.buttonQuit.name = "quit button"
+            xprop = .75, yprop = .85, caption = "Quit")
         self.addSprite(self.buttonQuit)
